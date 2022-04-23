@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Convertitore</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid>
+    
+    <ion-row>
+      
+      <ion-col></ion-col>
+      
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Celsius</ion-label>
+          <ion-input [(ngModel)]="cel" type="text" id="celsius" name="celsius" (keyup)="gradiC($event.target.value)" value="{{fval}}"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col class="">
+        <ion-item>
+          <ion-label position="fixed">Fahrenheit</ion-label>
+          <ion-input [(ngModel)]="fah" type="text" id="fah" name="fah" (keyup)="gradiF($event.target.value)" value="{{cval}}"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col></ion-col>
+    
+    </ion-row>
+
+    <ion-row>
+      
+      <ion-col></ion-col>
+      
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Chilometri</ion-label>
+          <ion-input [(ngModel)]="km" type="text" id="km" name="km" (keyup)="disK($event.target.value)" value="{{mval}}"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col class="">
+        <ion-item>
+          <ion-label position="fixed">Miglia</ion-label>
+          <ion-input [(ngModel)]="mi" type="text" id="mi" name="mi" (keyup)="disM($event.target.value)" value="{{kval}}"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col></ion-col>
+    
+    </ion-row>
+
+  </ion-grid>
+  
+</ion-content>
