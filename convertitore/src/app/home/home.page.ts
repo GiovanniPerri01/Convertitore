@@ -7,10 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  cel:number;
-  fah:number;
-  km:number;
-  mi:number;
   cval:number;
   fval:number;
   kval:number;
