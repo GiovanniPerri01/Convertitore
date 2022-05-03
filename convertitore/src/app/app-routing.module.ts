@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'convertitore',
+    loadChildren: () => import('./convertitore/convertitore.module').then( m => m.ConvertitorePageModule)
+  },
 ];
 
 @NgModule({
