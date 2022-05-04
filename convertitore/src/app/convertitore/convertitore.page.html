@@ -15,14 +15,14 @@
       <ion-col>
         <ion-item>
           <ion-label position="fixed">Celsius</ion-label>
-          <app-input-box type="text" id="cel" name="cel" value="{{fval}}" (keyup)="gradiC($event.target.value)"></app-input-box>
+          <app-input-box unita="C" [valore]="C" (eventoConversione)="notificaConversione($event)"></app-input-box>
         </ion-item>
       </ion-col>
       
       <ion-col class="">
         <ion-item>
-          <ion-label position="fixed">Fahrenheit</ion-label>
-          <app-input-box type="text" id="fah" name="fah" value="{{cval}}" (keyup)="gradiF($event.target.value)"></app-input-box>
+          <ion-label position="fixed">Farhenait</ion-label>
+          <app-input-box unita="F" [valore]="F" (eventoConversione)="notificaConversione($event)"></app-input-box>
         </ion-item>
       </ion-col>
 
@@ -37,14 +37,14 @@
       <ion-col>
         <ion-item>
           <ion-label position="fixed">Chilometri</ion-label>
-          <app-input-box type="text" id="km" name="km" value="{{mval}}" (keyup)="disK($event.target.value)"></app-input-box>
+          <app-input-box unita="KM" [valore]="KM" (eventoConversione)="notificaConversione($event)"></app-input-box>
         </ion-item>
       </ion-col>
       
-      <ion-col class="">
+      <ion-col>
         <ion-item>
           <ion-label position="fixed">Miglia</ion-label>
-          <app-input-box type="text" id="mi" name="mi" value="{{kval}}" (keyup)="disM($event.target.value)"></app-input-box>
+          <app-input-box unita="MI" [valore]="MI" (eventoConversione)="notificaConversione($event)"></app-input-box>
         </ion-item>
       </ion-col>
 

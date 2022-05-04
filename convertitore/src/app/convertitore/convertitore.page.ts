@@ -6,26 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./convertitore.page.scss'],
 })
 export class ConvertitorePage implements OnInit {
+  C:number;
+  F:number;
+  KM:number;
+  MI:number;
 
-  cval:number;
-  fval:number;
-  kval:number;
-  mval:number;
+  notificaConversione(messaggio:string){
 
-  gradiC(x){
-    this.cval = 1.8 * x + 32;
-  }
+    console.log(messaggio);
+    const messDiviso = messaggio.split(":");
 
-  gradiF(x){
-    this.fval = (x - 32) / 1.8;
-  }
+    if(messDiviso[0] === "C"){
+      this.F=+messDiviso[1];
+    }
 
-  disK(x){
-    this.kval = x * 0.62137;
-  }
+    if(messDiviso[0] === "F"){
+      this.C=+messDiviso[1];
+    }
 
-  disM(x){
-    this.mval = x / 0.62137;
+    if(messDiviso[0] === "KM"){
+      this.MI=+messDiviso[1];
+    }
+
+    if(messDiviso[0] === "MI"){
+      this.KM=+messDiviso[1];
+    }
+
   }
 
   constructor() { }

@@ -13,6 +13,6 @@ import { InputBoxComponent } from './input-box.component';
     FormsModule,
     IonicModule
   ],
-  exports: [InputBoxComponent]
+  exports: [InputBoxModule]
 })
 export class InputBoxModule { }
